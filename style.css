@@ -5,7 +5,7 @@ html {
 
 .container {
   background-image: url(./image/image.jpeg);
-  margin: 20 auto;
+  margin: 0;
 }
 .container__calculator {
   width: 320px;
@@ -14,7 +14,7 @@ html {
   margin: 0px auto;
   position: relative;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 11px 17px 17px 0 rgba(233, 224, 224, 0.3), 12px 11px 20px 0 rgba(78, 75, 75, 0.19);
 }
 
 #result {
@@ -46,32 +46,46 @@ html {
   width: 60px;
   height: 60px;
   margin: 10px;
+  padding: 0px;
   float: left;
   border-radius: 50%;
   border-width: 0;
   font-family: "Aboreto", sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
+  color: #f0ecdd;
+  background-color: #444352;
 }
 .operator__number {
   width: 60px;
   height: 60px;
   margin: 10px;
+  padding: 0px;
   float: left;
   border-radius: 15px;
   border-width: 0;
   font-family: "Aboreto", sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
+  background-color: #bdb8b8;
 }
 .operator__zero {
   width: 140px;
   height: 60px;
   margin: 10px;
+  padding: 0px;
   float: left;
   border-radius: 15px;
   border-width: 0;
   font-family: "Aboreto", sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
+  background-color: #bdb8b8;
+}
+.operator__function:active, .operator__number:active, .operator__zero:active {
+  font-size: 16px;
+}
+
+button:nth-child(19) {
+  background-color: #ea6f11;
 }

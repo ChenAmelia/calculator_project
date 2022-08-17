@@ -5,6 +5,9 @@
 $font-body: "Aboreto", sans-serif;
 $color-black: rgb(22, 21, 21);
 $color-white: rgb(240, 236, 221);
+$color-darkgrey: rgb(68, 67, 82);
+$color-lightgrey:rgb(189, 184, 184);
+$color-orange: rgb(234, 111, 17);
 
 
 html {
@@ -15,7 +18,7 @@ html {
 .container {
 
     background-image: url(./image/image.jpeg);
-    margin: 20 auto;
+    margin: 0;
 
 
     &__calculator {
@@ -25,7 +28,7 @@ html {
         margin: 0px auto;
         position: relative;
         border-radius: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 11px 17px 17px 0 rgb(233 224 224 / 30%), 12px 11px 20px 0 rgb(78 75 75 / 19%);
     }
 }
 
@@ -61,40 +64,52 @@ html {
         width: 60px;
         height: 60px;
         margin: 10px;
+        padding: 0px;
         float:left;
         border-radius: 50%;
         border-width: 0;
         font-family: $font-body;
         font-weight: bold;
-        font-size: 20px;
-        
+        font-size: 22px;
+        color: $color-white;
+        background-color:$color-darkgrey ;
     }
 
     &__number {
         width: 60px;
         height: 60px;
         margin: 10px;
+        padding: 0px;
         float:left;
         border-radius: 15px;
         border-width: 0;
         font-family: $font-body;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
+        background-color: $color-lightgrey;
     }
 
     &__zero {
         width: 140px;
         height: 60px;
         margin: 10px;
+        padding: 0px;
         float:left;
         border-radius: 15px;
         border-width: 0;
         font-family: $font-body;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 22px;
+        background-color: $color-lightgrey;
     }
 
-    
+    &__function:active, &__number:active, &__zero:active {
+        font-size: 16px;
+    }
 
+}
+
+button:nth-child(19) {
+    background-color: $color-orange;
 }
 
