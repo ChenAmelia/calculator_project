@@ -58,6 +58,20 @@ html {
     height: 450px;
 }
 
+#zero {
+    width: 140px;
+    height: 60px;
+    margin: 10px;
+    padding: 0px;
+    float:left;
+    border-radius: 15px;
+    border-width: 0;
+    font-family: $font-body;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: $color-lightgrey;
+}
+
 .operator {
 
     &__function {
@@ -77,20 +91,6 @@ html {
 
     &__number {
         width: 60px;
-        height: 60px;
-        margin: 10px;
-        padding: 0px;
-        float:left;
-        border-radius: 15px;
-        border-width: 0;
-        font-family: $font-body;
-        font-weight: bold;
-        font-size: 22px;
-        background-color: $color-lightgrey;
-    }
-
-    &__zero {
-        width: 140px;
         height: 60px;
         margin: 10px;
         padding: 0px;

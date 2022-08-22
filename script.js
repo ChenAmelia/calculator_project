@@ -7,8 +7,10 @@ let funcButton = document.getElementsByClassName('operator__function');
 let numButton = document.getElementsByClassName('operator__number');
 let clearAllButton = document.getElementById('clearall');
 let clearErrorButton = document.getElementById('clearerror');
-let dotButton = document.getElementById('dot');
 let euqalButton = document.getElementById('equal');
+
+//set up dot button and prevent the button from repetitive input
+let dotButton = document.getElementById('dot');
 
 
 //check if links work
@@ -26,6 +28,7 @@ console.log(euqalButton);
 let displays = "";
 let funcOperators = "";
 let allowToInputOperator = false;
+let allowToInputDot = true;
 
 console.log("displays", displays);
 console.log("funcOperators", funcOperators);
@@ -42,6 +45,7 @@ for(let i = 0; i < numButton.length; i++) {
     }
 }
 
+
 for (let i = 0; i < funcButton.length; i++) {
     let func = funcButton[i];
     func.onclick = function() {
@@ -50,6 +54,7 @@ for (let i = 0; i < funcButton.length; i++) {
             displays += funcOperators;
             output.innerHTML = displays;  
             allowToInputOperator = false;
+            allowToInputDot = true
 
             console.log("displays", displays);
             console.log("funcOperators", funcOperators);
@@ -75,6 +80,20 @@ clearAllButton.onclick = function() {
 clearErrorButton.onclick = function() {
     displays = "";
     output.innerHTML = 0;
+}
+
+//automatically add 0. when there's no number in the input box
+//only allow dot to be input once in a number and reactive in the next number
+
+dotButton.onclick = function() {
+    if(displays == "") {
+        displays += '0.';
+        output.innerHTML = displays;
+    } else if(allowToInputDot) {
+        displays += ".";
+        output.innerHTML = displays;
+    }
+    allowToInputDot = false;
 }
 
 
