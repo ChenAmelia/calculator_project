@@ -27,8 +27,12 @@ console.log(euqalButton);
 //add function to variables
 let displays = "";
 let funcOperators = "";
+let sum = "";
+let calculation = "";
+
 let allowToInputOperator = false;
 let allowToInputDot = true;
+
 
 console.log("displays", displays);
 console.log("funcOperators", funcOperators);
@@ -38,10 +42,8 @@ for(let i = 0; i < numButton.length; i++) {
     number.onclick = function () {
         displays += number.innerHTML;
         output.innerHTML = displays;   
-        allowToInputOperator = true;
 
-        console.log("displays", displays);
-        console.log("funcOperators", funcOperators);  
+        allowToInputOperator = true; 
     }
 }
 
@@ -53,11 +55,10 @@ for (let i = 0; i < funcButton.length; i++) {
             funcOperators += func.innerHTML;
             displays += funcOperators;
             output.innerHTML = displays;  
+
             allowToInputOperator = false;
             allowToInputDot = true
 
-            console.log("displays", displays);
-            console.log("funcOperators", funcOperators);
         }
              
     }
@@ -65,18 +66,50 @@ for (let i = 0; i < funcButton.length; i++) {
 
 
 
-//let equal mark works
-
+/*add function to equal
 euqalButton.onclick = function() {
     output.innerHTML = eval(displays);
     funcOperators = "";
 }
+*/
 
+euqalButton.onclick = function() {
+
+    const calculateNumbers = (num1, num2) => {
+
+        switch (calculation) {
+            case "add": 
+            sum = (Number(num1) + Number(num2).toString());
+            break;
+            case "subtract": 
+            sum = (Number(num1) - Number(num2).toString());
+            break;
+            case "multiply": 
+            sum = (Number(num1) * Number(num2).toString());
+            break;
+            case "divide": 
+            sum = (Number(num1) / Number(num2).toString());
+            break;
+        }
+        return sum;
+    }
+    sum.innerHTML = displays;
+    displays += funcOperators;
+    funcOperators += euqalButton.innerHTML;
+
+    funcOperators = "";
+            
+}
+
+
+
+//add function to clear-all button
 clearAllButton.onclick = function() {
     displays = "";
     output.innerHTML = 0;
 }
 
+//add function to clear error button
 clearErrorButton.onclick = function() {
     displays = "";
     output.innerHTML = 0;
@@ -84,7 +117,6 @@ clearErrorButton.onclick = function() {
 
 //automatically add 0. when there's no number in the input box
 //only allow dot to be input once in a number and reactive in the next number
-
 dotButton.onclick = function() {
     if(displays == "") {
         displays += '0.';
