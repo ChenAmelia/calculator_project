@@ -13,7 +13,6 @@
     <title>Calculator</title>
 </head>
 <body>
-    <script src="script.js"></script>
     <div>
         <div class="container">
             <div class="container__calculator">
@@ -26,27 +25,28 @@
                     </div>
                 </div>
                 <div id="keyboard">
-                    <div class="opertaor">
-                    <button class="operator__function">C</button>
-                    <button class="operator__function">CE</button>
-                    <button class="operator__function">%</button>
-                    <button class="operator__function">/</button>
-                    <button class="operator__number">7</button>
-                    <button class="operator__number">8</button>
-                    <button class="operator__number">9</button>
-                    <button class="operator__function">*</button>
-                    <button class="operator__number">4</button>
-                    <button class="operator__number">5</button>
-                    <button class="operator__number">6</button>
-                    <button class="operator__function">-</button>
-                    <button class="operator__number">1</button>
-                    <button class="operator__number">2</button>
-                    <button class="operator__number">3</button>
-                    <button class="operator__function">+</button>
-                    <button class="operator__zero">0</button>
-                    <button class="operator__number">.</button>
-                    <button class="operator__function">=</button>
-                </div></div>
+                    <div class="operator">
+                        <button class="operator__function" id="clearall">C</button>
+                        <button class="operator__function" id="clearerror">CE</button>
+                        <button class="operator__function">%</button>
+                        <button class="operator__function">/</button>
+                        <button class="operator__number">7</button>
+                        <button class="operator__number">8</button>
+                        <button class="operator__number">9</button>
+                        <button class="operator__function">*</button>
+                        <button class="operator__number">4</button>
+                        <button class="operator__number">5</button>
+                        <button class="operator__number">6</button>
+                        <button class="operator__function">-</button>
+                        <button class="operator__number">1</button>
+                        <button class="operator__number">2</button>
+                        <button class="operator__number">3</button>
+                        <button class="operator__function">+</button>
+                        <button class="operator__zero">0</button>
+                        <button class="operator__number" id="dot">.</button>
+                        <button class="operator__function" id="equal">=</button>
+                    </div>
+                </div>
             </div>
         
         </div>
@@ -59,6 +59,6 @@
 
 
 
-    
+    <script src="script.js"></script>
 </body>
 </html>
