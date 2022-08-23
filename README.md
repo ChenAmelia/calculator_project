@@ -1,0 +1,8 @@
+Simple Calculator
+
+This calculator can be used for simple math calculations such as addition, subtraction, multiplication and division. The calculator will process based on your command when you click a number, an operator, and another number. In this project, I set multiple variables in order to link HTML elements to javascript. Then I use functions like arrow function, for function and onclick function when a button is used to call a function. An additional function was added to the dot button to ensure it can’t be in number twice or more and it can’t exist by itself without a number before it. In order to make the project a user-friendly interface, the calculator will automatically add 0. if a dot was clicked without a number, so the input value will be a normal number and can be calculated.
+
+This is my first calculator project. When I was building the project, I came across a lot of issues. Most of them are about how to link HTML elements to Javascript and how to make the elements work through different functions. For now, there are still a few issues unsolved and functions that don’t work well, such as the calculator processing the number as strings. So, when you input 3 + 5 * 3 = 24, which should process as (3+5)*3, and the sum of 3+5 should come out first and then multiply three. But this calculator will process as 3 + 5 * 3 = 18, which will clear the sum of 3 + 5 and restart the whole calculation process.
+
+For further improvements, I hope to add: 1. Delete error function, just delete one number instead of clearing all 2. Normal calculation function, The result of the previous operation is obtained, and the result is evaluated as a new variable. 3. Add % to numbers
+
