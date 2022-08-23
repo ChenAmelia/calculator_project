@@ -59,6 +59,7 @@ euqalButton.onclick = function() {
     output.innerHTML = calculate(displays);
     history.innerHTML = calculate(displays);
     funcOperators = "";
+    allowToInputDot = true;
 }
 
 
@@ -81,6 +82,7 @@ dotButton.onclick = function() {
         displays += '0.';
         output.innerHTML = displays;
     } else if(allowToInputDot) {
+        allowToInputDot = true;
         displays += ".";
         output.innerHTML = displays;
     }
